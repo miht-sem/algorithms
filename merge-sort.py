@@ -20,7 +20,7 @@ def quick_merge_random_sort(list_):
         pivot = list_[main_el]
         less = [i for i in list_[:main_el] if i <= pivot] + [i for i in list_[main_el + 1:] if i <= pivot]
         greater = [i for i in list_[:main_el] if i > pivot] + [i for i in list_[main_el + 1:] if i > pivot]
-        return quick_merge_middle_sort(less) + [pivot] + quick_merge_middle_sort(greater)
+        return quick_merge_random_sort(less) + [pivot] + quick_merge_random_sort(greater)
 
 
 def quick_sort(list_):
