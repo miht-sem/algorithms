@@ -39,7 +39,7 @@ def quick_smart_random_sort(list_):
     main_el = randint(0, len(list_) - 1)
     pivot = list_[main_el]
     less = list(filter(lambda x: x < pivot, list_))
-    greater = list(filter(lambda x: x > pivot, list_))
+    greater = list(filter(lambda x: x >= pivot, list_))
     return quick_smart_random_sort(less) + [pivot] + quick_smart_random_sort(greater)
 
 
