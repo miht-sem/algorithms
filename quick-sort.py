@@ -16,7 +16,7 @@ def quick_merge_random_sort(list_):
     if len(list_) < 2:
         return list_
     else:
-        main_el = randint(0, len(list_) - 1)
+        main_el = randint(0, len(list_) - 2)
         pivot = list_[main_el]
         less = [i for i in list_[:main_el] if i <= pivot] + [i for i in list_[main_el + 1:] if i <= pivot]
         greater = [i for i in list_[:main_el] if i > pivot] + [i for i in list_[main_el + 1:] if i > pivot]
